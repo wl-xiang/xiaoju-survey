@@ -95,7 +95,7 @@ onMounted(async () => {
     align-items: center;
     justify-content: center;
 
-    background: #f6f7f9;
+    background: var(--app-bg-page);
     padding: 30px 40px 50px 40px;
   }
 
@@ -119,7 +119,7 @@ onMounted(async () => {
 
 .container-content {
   margin-left: 20px;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   width: 760px;
   padding: 30px 30px 80px;
   border-radius: 2px;
@@ -133,7 +133,7 @@ onMounted(async () => {
     font-family: PingFangSC-Medium;
     margin: 20px 0;
     font-size: 18px;
-    color: #4a4c5b;
+    color: var(--app-text-primary);
     letter-spacing: 0;
     line-height: 26px;
   }

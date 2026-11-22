@@ -42,7 +42,7 @@ onMounted(initData)
 <style lang="scss" scoped>
 .separate-statis-page {
   height: 100%;
-  background: #fff;
+  background: var(--app-bg-card);
   padding: 0 24px;
   overflow-y: auto;
 }

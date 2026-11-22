@@ -5,8 +5,8 @@ body {
 }
 
 html {
-  color: #000;
-  background: #fff;
+  color: var(--app-text-primary);
+  background: var(--app-bg-page);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;

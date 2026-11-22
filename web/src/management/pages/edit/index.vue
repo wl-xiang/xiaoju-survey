@@ -2,7 +2,7 @@
   <div class="edit-index">
     <LeftMenu class="left"></LeftMenu>
     <div class="right">
-      <CommonTemplate style="background-color: #f6f7f9">
+      <CommonTemplate style="background-color: var(--app-bg-page)">
         <template #nav>
           <Navbar class="navbar"></Navbar>
         </template>
@@ -95,7 +95,7 @@ onMounted(async () => {
   }
 
   .navbar {
-    border-bottom: 1px solid #e7e9eb;
+    border-bottom: 1px solid var(--app-border-color);
   }
 }
 </style>

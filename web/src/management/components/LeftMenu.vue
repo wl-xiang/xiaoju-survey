@@ -82,7 +82,7 @@ watch(
 .nav {
   width: 80px;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   font-size: 12px;
   box-shadow: 2px 0 10px 0 rgba(173, 200, 218, 0.26);
 }

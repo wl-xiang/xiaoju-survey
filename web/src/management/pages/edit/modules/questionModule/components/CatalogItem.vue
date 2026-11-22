@@ -37,7 +37,7 @@ const handleSelect = () => {
   font-size: 12px;
   display: flex;
   align-items: center;
-  color: #333333;
+  color: var(--app-text-strong);
   cursor: pointer;
 
   &:last-child {

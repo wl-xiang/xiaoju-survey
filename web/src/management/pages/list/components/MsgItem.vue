@@ -151,7 +151,7 @@ const handleDislike = () => {
   &.user {
     flex-direction: row-reverse;
     .bubble {
-      background: #FEF6E6;
+      background: var(--app-brand-tint);
       border: 1px solid #FEF6E6;
       margin-left: auto;
       

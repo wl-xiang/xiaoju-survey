@@ -50,7 +50,7 @@ const handleChangePreview = (data: any) => {
   box-shadow: none;
   border: none;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   .title {
     height: 40px;
     line-height: 40px;
@@ -68,7 +68,7 @@ const handleChangePreview = (data: any) => {
 
   label.title {
     font-size: 16px;
-    color: #333;
+    color: var(--app-text-strong);
   }
 
   .status-item {

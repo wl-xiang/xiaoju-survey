@@ -48,7 +48,7 @@ export default {
     line-height: 32px;
     padding: 0 25px;
     font-size: 12px;
-    background: #ffffff;
+    background: var(--app-bg-card);
     border-radius: 18px;
     &:focus {
       border-color: $primary-color;

@@ -107,7 +107,7 @@ export default defineComponent({
   position: fixed;
   left: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   z-index: 99;
 }
 .picker-mask {
@@ -181,8 +181,8 @@ export default defineComponent({
   transform: translateY(-18px);
   width: 100%;
   height: 40px;
-  border-top: 1px solid #E3E4E8;
-  border-bottom: 1px solid #E3E4E8;
+  border-top: 1px solid var(--app-border-color);
+  border-bottom: 1px solid var(--app-border-color);
 }
 
 .x-picker__content-item {

@@ -523,7 +523,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
 <style lang="scss" scoped>
 .question-list-root {
   height: 100%;
-  background-color: #f6f7f9;
+  background-color: var(--app-bg-page);
   .content-wrap {
     position: relative;
     height: calc(100% - 56px);
@@ -552,7 +552,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
       }
 
       .create-btn {
-        background: #4a4c5b;
+        background: var(--app-cta-bg);
         color: #fff;
       }
 
@@ -589,7 +589,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
     align-items: center;
     justify-content: flex-start;
     padding-left: 20px;
-    background-color: #f6f7f9;
+    background-color: var(--app-bg-page);
     border-radius: 4px;
     cursor: pointer;
     .icon {
@@ -597,7 +597,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
       height: 30px;
       line-height: 30px;
       text-align: center;
-      background-color: #fff;
+      background-color: var(--app-bg-card);
       margin-right: 15px;
       box-shadow: 1px 1px 5px 0 $primary-color;
       .iconfont {
@@ -615,7 +615,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -631,7 +631,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
       margin-left: 20px;
       line-height: 56px;
       font-size: 16px;
-      color: #6e707c;
+      color: var(--app-text-regular);
       position: relative;
       cursor: pointer;
       &::before {
@@ -656,7 +656,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   z-index: 999;
   overflow-x: auto;
   overflow-y: hidden;
@@ -668,7 +668,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
     padding: 0 24px;
     height: 56px;
     min-width: 1280px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--app-border-light);
     flex-grow: 0;
     flex-shrink: 0;
  
@@ -684,7 +684,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
 
     .nav-title {
       font-size: 18px;
-      color: #333;
+      color: var(--app-text-strong);
     }
   }
 }

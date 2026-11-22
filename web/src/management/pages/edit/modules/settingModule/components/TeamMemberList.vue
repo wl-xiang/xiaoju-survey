@@ -82,7 +82,7 @@ onMounted(() => {
   width: 508px;
 
   .team-tree-wrap {
-    background: #ffffff;
+    background: var(--app-bg-card);
     border: 1px solid rgba(227, 228, 232, 1);
     border-radius: 2px;
     min-height: 204px;

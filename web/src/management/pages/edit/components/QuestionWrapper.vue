@@ -192,7 +192,7 @@ const setMoveState = (state: boolean) => {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.09);
   }
   &.isSelected {
-    background-color: #f2f4f7;
+    background-color: var(--app-bg-hover);
     box-shadow: 0 0 5px #e3e4e8;
   }
 
@@ -230,7 +230,7 @@ const setMoveState = (state: boolean) => {
   }
   .logic-text {
     font-size: 12px;
-    color: #c8c9cd;
+    color: var(--app-text-placeholder);
     padding: 0 0.4rem;
     line-height: 26px;
   }

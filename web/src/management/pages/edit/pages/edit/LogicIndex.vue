@@ -60,7 +60,7 @@ const handleChange = (name: any) => {
   position: relative;
   top: 24px;
 
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   :deep(.el-tabs__content) {
     height: calc(100% - 10px);
     padding-bottom: 10px;

@@ -104,7 +104,7 @@ const showPreview = ({ snapshot }, id) => {
   :deep(.el-collapse-item__header) {
     font-size: 16px;
     font-weight: bold;
-    color: #4a4c5b;
+    color: var(--app-text-primary);
   }
 }
 
@@ -217,7 +217,7 @@ const showPreview = ({ snapshot }, id) => {
       height: 10px;
       width: 10px;
       border: 1px solid var(--el-border-color-light);
-      background: #ffffff;
+      background: var(--app-bg-card);
       border-bottom-color: transparent;
       border-right-color: transparent;
     }

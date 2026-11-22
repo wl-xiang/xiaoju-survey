@@ -25,7 +25,7 @@ provide('renderData', renderData)
 .logic-wrapper {
   height: 100%;
   width: 100%;
-  background: #fff;
+  background: var(--app-bg-card);
   text-align: center;
   overflow: auto;
   // position: fixed;

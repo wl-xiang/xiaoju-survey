@@ -45,7 +45,7 @@ import { analysisType } from '@/management/config/analysisConfig'
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background-color: #f6f7f9;
+    background-color: var(--app-bg-page);
 
     .analysis-tabs {
       flex: none;
@@ -58,13 +58,13 @@ import { analysisType } from '@/management/config/analysisConfig'
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #fff;
-      border-bottom: 1px solid #e7e9eb;
+      background-color: var(--app-bg-card);
+      border-bottom: 1px solid var(--app-border-color);
 
       &__item {
         cursor: pointer;
         padding: 8px 0;
-        color: #92949d;
+        color: var(--app-text-muted);
 
         .iconfont {
           margin-right: 8px;

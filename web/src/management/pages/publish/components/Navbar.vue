@@ -23,7 +23,7 @@ defineProps({
   height: 56px;
   position: relative;
   display: flex;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   > div {
     display: flex;
     flex-direction: row;

@@ -344,7 +344,7 @@ watch(
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #fff;
+    background: var(--app-bg-card);
     border-radius: 4px;
     box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
   }
@@ -379,7 +379,7 @@ watch(
     font-size: 14px;
     line-height: 32px;
     text-align: left;
-    color: #4a4c5b;
+    color: var(--app-text-primary);
     width: 180px;
     white-space: nowrap;
     overflow: hidden;
@@ -394,7 +394,7 @@ watch(
     line-height: 28px;
     white-space: nowrap;
     overflow: hidden;
-    color: #4a4c5b;
+    color: var(--app-text-primary);
     text-overflow: ellipsis;
   }
 
@@ -434,16 +434,16 @@ watch(
     position: absolute;
     width: 300px;
     height: 100px;
-    background: #f6f7f9;
+    background: var(--app-bg-page);
     border: none;
     box-shadow: 0 2px 10px -2px rgba(82, 82, 102, 0.2);
     border-radius: 4px;
   }
   .lf-control {
     .iconfont {
-      color: #6e707c;
+      color: var(--app-text-regular);
     }
-    color: #6e707c;
+    color: var(--app-text-regular);
   }
 }
 </style>

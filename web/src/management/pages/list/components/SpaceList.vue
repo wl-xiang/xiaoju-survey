@@ -204,7 +204,7 @@ defineExpose({ onCloseModify })
 }
 .list-wrap {
   padding: 20px;
-  background: #fff;
+  background: var(--app-bg-card);
 
   .search {
     display: flex;
@@ -215,7 +215,7 @@ defineExpose({ onCloseModify })
       .tableview-header .el-table__cell {
         .cell {
           height: 24px;
-          color: #4a4c5b;
+          color: var(--app-text-primary);
           font-size: 14px;
         }
       }

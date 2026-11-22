@@ -51,11 +51,13 @@ const handleLogout = () => {
   .left {
     display: flex;
     align-items: center;
-    width: calc(100% - 200px);
+    flex: 1;
+    min-width: 0;
     .logo-img {
       width: 90px;
       height: fit-content;
       padding-right: 20px;
+      flex: 0 0 auto;
     }
     .el-menu {
       width: 100%;
@@ -73,17 +75,22 @@ const handleLogout = () => {
   .login-info {
     display: flex;
     align-items: center;
+    flex: 0 0 auto;
+    white-space: nowrap;
     .theme-toggle {
       margin-left: 14px;
+      flex: 0 0 auto;
     }
     .login-info-img {
       margin-left: 10px;
       height: 30px;
       margin-top: -6px;
+      flex: 0 0 auto;
     }
 
     .logout {
       margin-left: 20px;
+      white-space: nowrap;
     }
   }
 

@@ -19,6 +19,6 @@ import SetterPanel from '../../modules/questionModule/SetterPanel.vue'
 </script>
 <style lang="scss" scoped>
 .navbar {
-  border-bottom: 1px solid #e7e9eb;
+  border-bottom: 1px solid var(--app-border-color);
 }
 </style>

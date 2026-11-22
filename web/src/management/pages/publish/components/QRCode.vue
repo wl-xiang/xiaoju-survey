@@ -65,7 +65,7 @@ watch(
     display: flex;
 
     .el-button {
-      color: #6e707c;
+      color: var(--app-text-regular);
       height: 32px;
       line-height: 32px;
       width: 32px;
@@ -77,7 +77,7 @@ watch(
       transition: all 0.2s;
       &:hover {
         background: $background-color-gray;
-        color: #6e707c;
+        color: var(--app-text-regular);
         border: none;
       }
     }

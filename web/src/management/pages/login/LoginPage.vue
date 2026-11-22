@@ -340,7 +340,7 @@ const refreshCaptcha = async () => {
   }
 
   .tips {
-    color: #999;
+    color: var(--app-text-muted);
     position: fixed;
     bottom: 15px;
     text-align: center;

@@ -62,7 +62,7 @@ const toHomePage = () => {
       margin-left: 20px;
       line-height: 56px;
       font-size: 18px;
-      color: #6e707c;
+      color: var(--app-text-regular);
       position: relative;
       cursor: pointer;
       &::before {
