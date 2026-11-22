@@ -98,7 +98,7 @@ const addPageControls = () => {
 
 .controls-wrap {
   &-item {
-    color: #4a4c5b;
+    color: var(--app-text-primary);
     font-size: 12px;
     font-weight: 400;
     cursor: pointer;
@@ -112,7 +112,7 @@ const addPageControls = () => {
 .pagination-wrap {
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: var(--app-bg-card);
   box-shadow: 0px 2px 10px -2px rgba(82, 82, 102, 0.2);
   border-radius: 4px;
   margin-bottom: 12px;

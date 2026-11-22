@@ -166,7 +166,7 @@ onMounted(() => {
 
   &-title {
     font-size: 16px;
-    color: #333;
+    color: var(--app-text-strong);
     font-weight: 600;
     margin-bottom: 24px;
     display: flex;

@@ -435,7 +435,7 @@ defineExpose({
 
   .list-wrapper {
     padding: 10px 20px;
-    background: #fff;
+    background: var(--app-bg-card);
 
     .list-table {
       min-height: 620px;
@@ -455,7 +455,7 @@ defineExpose({
     .tableview-header .el-table__cell {
       .cell {
         height: 24px;
-        color: #4a4c5b;
+        color: var(--app-text-primary);
         font-size: 14px;
       }
     }
@@ -477,10 +477,10 @@ defineExpose({
 }
 
 .el-select-dropdown__wrap {
-  background: #eee;
+  background: var(--app-bg-hover);
 }
 
 .el-select-dropdown__item.hover {
-  background: #fff;
+  background: var(--app-bg-card);
 }
 </style>

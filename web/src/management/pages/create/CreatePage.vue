@@ -24,7 +24,7 @@ const onSelectTypeChange = (type: string) => {
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
 }
 @media screen and (max-height: 800px) {
   #new {

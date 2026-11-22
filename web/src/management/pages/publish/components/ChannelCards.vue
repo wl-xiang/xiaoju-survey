@@ -116,7 +116,7 @@ const handleIntroClose = () => {
     display: flex;
     flex-direction: column;
     margin: 0 20px 20px 0;
-    background: #fff;
+    background: var(--app-bg-card);
     border: 1px solid rgba(227,228,232,1);
     border-radius: 4px;
     overflow: hidden;
@@ -131,7 +131,7 @@ const handleIntroClose = () => {
       justify-content: space-between;
       align-items: center;
       line-height: 24px;
-      background: #f6f7f9;
+      background: var(--app-bg-page);
       .intro {
         font-size: 12px;
         // &:hover{
@@ -148,7 +148,7 @@ const handleIntroClose = () => {
       flex: 1;
       color: #6E707C;
       &:hover {
-        background:#fff;
+        background:var(--app-bg-card);
       }
     }
   }

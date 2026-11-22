@@ -97,6 +97,6 @@ Survey.init({
   }
   
   code {
-    color: #333;
+    color: var(--app-text-strong);
   }
   </style>

@@ -132,25 +132,25 @@ const handleMenu = (id: string) => {
     }
 
     &.bottom {
-      border-bottom: 1px solid #f6f5f2;
+      border-bottom: 1px solid var(--app-border-light);
     }
     &.bottom-element {
       position: absolute;
       bottom: 0;
-      border-top: 1px solid #f6f5f2;
+      border-top: 1px solid var(--app-border-light);
     }
     &.main-item {
       // margin: 10px 0;
       font-size: 16px;
       font-weight: 500;
-      color: #292a36;
+      color: var(--app-text-strong);
       height: 48px;
     }
     &.sub-item {
       margin: 0;
     }
     &:hover {
-      background-color: #f2f4f7;
+      background-color: var(--app-bg-hover);
     }
     .title-content {
       display: flex;
@@ -173,7 +173,7 @@ const handleMenu = (id: string) => {
 
     .title-total {
       font-size: 14px;
-      color: #92949d;
+      color: var(--app-text-muted);
       text-align: right;
       font-weight: 400;
     }
@@ -200,7 +200,7 @@ const handleMenu = (id: string) => {
   color: #faa600 !important;
 }
 .check-item {
-  background: #fef6e6 100% !important;
+  background: var(--app-brand-tint) 100% !important;
 }
 .recycle-bin-item {
   height: 56px!important;

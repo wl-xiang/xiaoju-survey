@@ -98,7 +98,7 @@ const changePreset = (banner: any) => {
   box-shadow: none;
   border: none;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   .title {
     height: 40px;
     line-height: 40px;

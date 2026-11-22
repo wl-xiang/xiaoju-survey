@@ -177,13 +177,13 @@ const handleCurrentChange = (val: number) => {
 <style lang="scss" scoped>
 .question-list-root {
   height: 100%;
-  background-color: #f6f7f9;
+  background-color: var(--app-bg-page);
 
   .list-wrapper {
     width: 90%;
     min-width: 1080px;
     padding: 10px 20px;
-    background: #fff;
+    background: var(--app-bg-card);
     margin: 0 auto;
 
     .list-table {

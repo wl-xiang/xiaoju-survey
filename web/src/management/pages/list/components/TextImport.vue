@@ -104,7 +104,7 @@ const coypText = (item: { content: string }) => {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e3e4e8;
+    border-bottom: 1px solid var(--app-border-color);
     padding: 0 30px;
   }
   .text-input {

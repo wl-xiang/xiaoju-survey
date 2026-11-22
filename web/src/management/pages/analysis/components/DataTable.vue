@@ -121,7 +121,7 @@ const onPreviewImage = (e) => {
   position: relative;
   width: 100%;
   min-height: v-bind('tableMinHeight');
-  background: #fff;
+  background: var(--app-bg-card);
   padding: 10px 20px;
 
   .table-border {
@@ -135,7 +135,7 @@ const onPreviewImage = (e) => {
     .thead-cell .el-table__cell {
       .cell {
         height: 24px;
-        color: #4a4c5b;
+        color: var(--app-text-primary);
         font-size: 14px;
       }
     }

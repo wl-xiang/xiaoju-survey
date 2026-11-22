@@ -112,7 +112,7 @@ const normalizationURL = (value: any) => {
       line-height: 32px;
       text-align: center;
       vertical-align: top;
-      color: #6e707c;
+      color: var(--app-text-regular);
       cursor: pointer;
       font-size: 12px;
       transition: all 0.2s;

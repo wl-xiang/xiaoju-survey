@@ -57,7 +57,7 @@ const routes = [
 
   .navbar-btn {
     position: relative;
-    color: #92949d;
+    color: var(--app-text-muted);
     padding: 0 20px;
     cursor: pointer;
     a {

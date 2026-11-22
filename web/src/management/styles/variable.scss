@@ -1,43 +1,43 @@
 // 定义颜色变量
 $opacity: 1;
 
+// 品牌色保持不变（贯穿浅色/深色）
 $primary-color: #ffa600;
 $primary-color-hover: #fbb733;
 $primary-color-deep: #d48d00;
-$primary-color-light: #fffcf0;
+$primary-color-light: var(--app-brand-tint);
 
-$normal-color: #4a4c5b;
+// 语义色通过 CSS 变量定义，自动适配深色模式
+$normal-color: var(--app-text-primary);
 $normal-color-hover: #626369;
-$normal-color-deep: #292a36;
-$normal-color-light: #92959c;
+$normal-color-deep: var(--app-text-strong);
+$normal-color-light: var(--app-text-muted);
 
-$disable-color: #f2f4f7;
-$border-color: #e3e4e8;
+$disable-color: var(--app-bg-hover);
+$border-color: var(--app-border-color);
 $sub-color: #0f8a82;
 
-$font-color: #6e707c;
-$font-color-title: $normal-color;
-$font-color-stress: #2b3035;
+$font-color: var(--app-text-regular);
+$font-color-title: var(--app-text-primary);
+$font-color-stress: var(--app-text-strong);
 $font-color-invert: #ffffff;
 
-$background-color: #f6f7f9;
-$background-color-light: #ffffff;
-$background-color-gray: #f7f9fb;
-$background-color-dark: #e7e9eb;
-$primary-bg-color: #fef6e6;
-$primary-background-color: #fff;
+$background-color: var(--app-bg-page);
+$background-color-light: var(--app-bg-card);
+$background-color-gray: var(--app-bg-subtle);
+$background-color-dark: var(--app-bg-hover);
+$primary-bg-color: var(--app-brand-tint);
+$primary-background-color: var(--app-bg-card);
 
-$title-color-deep: #292a36;
-$title-color: #4a4c5b;
-$remark-color: #4a4c5b;
-$placeholder-color: #c8c9cd;
-$light-focus-color: #666666;
+$title-color-deep: var(--app-text-strong);
+$title-color: var(--app-text-primary);
+$remark-color: var(--app-text-regular);
+$placeholder-color: var(--app-text-placeholder);
+$light-focus-color: var(--app-text-regular);
 
-$spliter-color: hsl(0, 0%, 97%, 0.5);
+$spliter-color: var(--app-border-light);
 
 $error-color: #ec4e29;
-
-$primary-color-light: hsl(48, 100%, 97%);
 
 $title-size: 0.32rem;
 $font-size: 0.28rem;
@@ -46,7 +46,7 @@ $tip-size: 0.22rem;
 // 使用CSS自定义属性
 :root {
   --primary-color: #{$primary-color};
-  --primary-background-color: #{$primary-background-color};
+  --primary-background-color: var(--app-bg-card);
   --opacity: #{$opacity};
 }
 

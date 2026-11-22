@@ -62,7 +62,7 @@ const call = (t) => {
       cursor: pointer;
       height: 28px;
       &:hover {
-        background: #fef6e6 100%;
+        background: var(--app-brand-tint) 100%;
         span.more_con {
           color: #faa600;
         }

@@ -158,7 +158,7 @@ const handleDelete = (id: any) => {
     content: '';
     display: block;
     width: calc(100% - 32px);
-    border-top: 1px dashed #e3e4e8;
+    border-top: 1px dashed var(--app-border-color);
     position: absolute;
     left: 32px;
     bottom: 0;
@@ -168,7 +168,7 @@ const handleDelete = (id: any) => {
     bottom: 0px;
     width: 20px;
     height: 20px;
-    background: #fef6e6;
+    background: var(--app-brand-tint);
     border-radius: 2px;
     color: #faa600;
     font-size: 12px;
@@ -182,7 +182,7 @@ const handleDelete = (id: any) => {
     content: '';
     display: block;
     width: calc(100% - 32px);
-    border-top: 1px dashed #e3e4e8;
+    border-top: 1px dashed var(--app-border-color);
     position: absolute;
     left: 32px;
     bottom: 0;
@@ -190,7 +190,7 @@ const handleDelete = (id: any) => {
   .desc {
     display: inline-block;
     margin-right: 12px;
-    color: #333;
+    color: var(--app-text-strong);
     line-height: 32px;
   }
   .opt {

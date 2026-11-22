@@ -141,7 +141,7 @@ export default {
   display: flex;
   height: 60px;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--app-border-light);
   .score {
     flex-basis: 110px;
     text-align: center;

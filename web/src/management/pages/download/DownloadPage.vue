@@ -15,7 +15,7 @@ import TaskList from './components/TaskList.vue'
 <style lang="scss" scoped>
 .question-list-root {
   height: 100%;
-  background-color: #f6f7f9;
+  background-color: var(--app-bg-page);
   .table-container {
     margin-top: 20px;
     display: flex;

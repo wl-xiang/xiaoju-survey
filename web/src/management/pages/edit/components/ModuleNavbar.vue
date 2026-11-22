@@ -8,6 +8,7 @@
       <NavPanel></NavPanel>
     </div>
     <div class="right-group">
+      <ThemeToggle class="navbar-theme" />
       <CooperationPanel>
         <template #content="{ onCooper }">
           <div class="btn" @click="onCooper">
@@ -46,6 +47,7 @@ import PreviewPanel from '../modules/contentModule/PreviewPanel.vue'
 import SavePanel from '../modules/contentModule/SavePanel.vue'
 import PublishPanel from '../modules/contentModule/PublishPanel.vue'
 import CooperationPanel from '../modules/contentModule/CooperationPanel.vue'
+import ThemeToggle from '@/management/components/ThemeToggle.vue'
 import { seizeSession } from '@/management/api/survey'
 import { useRoute } from 'vue-router'
 
@@ -157,7 +159,7 @@ const seize = async (sessionId: string) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   > div {
     display: flex;
     flex-direction: row;
@@ -181,5 +183,8 @@ const seize = async (sessionId: string) => {
 }
 .right-group {
   right: 18px;
+}
+.navbar-theme {
+  margin-right: 10px;
 }
 </style>

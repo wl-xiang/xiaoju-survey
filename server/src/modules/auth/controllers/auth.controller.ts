@@ -18,6 +18,8 @@ import { ApiTags } from '@nestjs/swagger';
 
 const passwordReg = /^[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+$/;
 
+const DEFAULT_ACCESS_CODE = 'xiaoju@access';
+
 @ApiTags('auth')
 @Controller('/api/auth')
 export class AuthController {
@@ -28,6 +30,21 @@ export class AuthController {
     private readonly authService: AuthService,
   ) {}
 
+  /**
+   * 校验准入码，通过环境变量 XIAOJU_SURVEY_ACCESS_CODE 配置，默认 xiaoju@access
+   */
+  private checkAccessCode(accessCode: string) {
+    const expectedAccessCode =
+      this.configService.get<string>('XIAOJU_SURVEY_ACCESS_CODE') ||
+      DEFAULT_ACCESS_CODE;
+    if (accessCode !== expectedAccessCode) {
+      throw new HttpException(
+        '准入码不正确',
+        EXCEPTION_CODE.ACCESS_CODE_INCORRECT,
+      );
+    }
+  }
+
   @Post('/register')
   @HttpCode(200)
   async register(
@@ -37,6 +54,7 @@ export class AuthController {
       password: string;
       captchaId: string;
       captcha: string;
+      accessCode?: string;
     },
   ) {
     if (!userInfo.password) {
@@ -65,6 +83,8 @@ export class AuthController {
     if (!isCorrect) {
       throw new HttpException('验证码不正确', EXCEPTION_CODE.CAPTCHA_INCORRECT);
     }
+
+    this.checkAccessCode(userInfo.accessCode);
 
     const user = await this.userService.createUser({
       username: userInfo.username,
@@ -95,6 +115,7 @@ export class AuthController {
       password: string;
       captchaId: string;
       captcha: string;
+      accessCode?: string;
     },
   ) {
     const isCorrect = await this.captchaService.checkCaptchaIsCorrect({
@@ -105,6 +126,8 @@ export class AuthController {
     if (!isCorrect) {
       throw new HttpException('验证码不正确', EXCEPTION_CODE.CAPTCHA_INCORRECT);
     }
+
+    this.checkAccessCode(userInfo.accessCode);
 
     const username = await this.userService.getUserByUsername(
       userInfo.username,

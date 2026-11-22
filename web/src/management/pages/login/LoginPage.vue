@@ -8,7 +8,10 @@
   >
     <div class="login-top">
       <img src="/imgs/Logo.webp" alt="logo" />
-      <span>您好，请登录</span>
+      <div class="top-right">
+        <ThemeToggle />
+        <span>您好，请登录</span>
+      </div>
     </div>
     <div class="login-box">
       <el-form
@@ -20,11 +23,17 @@
         @submit.prevent
       >
         <el-form-item label="账号" prop="name">
-          <el-input v-model="formData.name" size="large"></el-input>
+          <el-input v-model="formData.name" size="large" placeholder="请输入账号"></el-input>
         </el-form-item>
 
         <el-form-item label="密码" prop="password">
-          <el-input type="password" v-model="formData.password" size="large"></el-input>
+          <el-input
+            type="password"
+            v-model="formData.password"
+            size="large"
+            placeholder="请输入密码"
+            show-password
+          ></el-input>
         </el-form-item>
 
         <el-form-item label="" v-if="passwordStrength">
@@ -38,9 +47,18 @@
 
         <el-form-item label="验证码" prop="captcha">
           <div class="captcha-wrapper">
-            <el-input style="width: 280px" v-model="formData.captcha" size="large"></el-input>
+            <el-input v-model="formData.captcha" size="large" placeholder="请输入验证码"></el-input>
             <div class="captcha-img" @click="refreshCaptcha" v-html="captchaImgData"></div>
           </div>
+        </el-form-item>
+
+        <el-form-item label="准入码" prop="accessCode">
+          <el-input
+            v-model="formData.accessCode"
+            size="large"
+            placeholder="请输入准入码"
+            show-password
+          ></el-input>
         </el-form-item>
 
         <el-form-item class="button-group">
@@ -81,6 +99,7 @@ import { CODE_MAP } from '@/management/api/base'
 import { useUserStore } from '@/management/stores/user'
 import { getUserInfo } from '@/management/utils/storage'
 import { getUserInfo as userInfoApi } from '@/management/api/auth'
+import ThemeToggle from '@/management/components/ThemeToggle.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -98,6 +117,7 @@ interface FormData {
   password: string
   captcha: string
   captchaId: string
+  accessCode: string
 }
 
 interface Pending {
@@ -109,7 +129,8 @@ const formData = reactive<FormData>({
   name: '',
   password: '',
   captcha: '',
-  captchaId: ''
+  captchaId: '',
+  accessCode: ''
 })
 
 // 每个滑块不同强度的颜色，索引0对应第一个滑块
@@ -178,6 +199,13 @@ const rules = {
       message: '请输入验证码',
       trigger: 'blur'
     }
+  ],
+  accessCode: [
+    {
+      required: true,
+      message: '请输入准入码',
+      trigger: 'blur'
+    }
   ]
 }
 
@@ -207,7 +235,8 @@ const submitForm = (type: 'login' | 'register') => {
           username: formData.name,
           password: formData.password,
           captcha: formData.captcha,
-          captchaId: formData.captchaId
+          captchaId: formData.captchaId,
+          accessCode: formData.accessCode
         })
         pending[type] = false
         if (res.code !== CODE_MAP.SUCCESS) {
@@ -258,9 +287,9 @@ const refreshCaptcha = async () => {
   height: 100vh;
 
   .login-top {
-    color: #4a4c5b;
+    color: var(--app-text-primary, #4a4c5b);
     height: 56px;
-    background: #fff;
+    background: var(--app-bg-header, #fff);
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
@@ -268,6 +297,12 @@ const refreshCaptcha = async () => {
 
     img {
       width: 90px;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
   }
 
@@ -280,10 +315,10 @@ const refreshCaptcha = async () => {
   }
 
   .login-form {
-    border-radius: 8px;
+    border-radius: var(--app-radius-card, 12px);
     padding: 60px 60px 60px 0;
-    background: #fff;
-    box-shadow: 4px 0 20px 0 rgba(82, 82, 102, 0.15);
+    background: var(--app-bg-card, #fff);
+    box-shadow: var(--app-shadow-card, 4px 0 20px 0 rgba(82, 82, 102, 0.15));
     margin-top: -150px;
     width: 580px;
 
@@ -295,6 +330,7 @@ const refreshCaptcha = async () => {
       width: 204px;
       height: 40px;
       font-size: 14px;
+      border-radius: var(--el-border-radius-base, 8px);
     }
 
     .register-button {
@@ -304,7 +340,7 @@ const refreshCaptcha = async () => {
   }
 
   .tips {
-    color: #999;
+    color: var(--app-text-muted);
     position: fixed;
     bottom: 15px;
     text-align: center;
@@ -315,13 +351,23 @@ const refreshCaptcha = async () => {
   .captcha-wrapper {
     display: flex;
     align-items: center;
+    width: 100%;
+    gap: 16px;
+    .el-input {
+      flex: 1;
+      min-width: 0;
+    }
     .captcha-img {
+      flex: 0 0 120px;
+      width: 120px;
       height: 40px;
       cursor: pointer;
+      border-radius: var(--el-border-radius-base, 8px);
+      overflow: hidden;
       :deep(> svg) {
-        max-height: 40px;
-        width: 120px;
-        margin-left: 20px;
+        display: block;
+        width: 100%;
+        height: 100%;
       }
     }
   }

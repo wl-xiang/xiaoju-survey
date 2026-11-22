@@ -105,7 +105,7 @@
 
     <!-- 右侧预览区域 -->
     <div class="right-panel">
-      <div class="questions-preview-wrapper" :style="{backgroundColor: questionList.length > 0 ? '#fff' : 'transparent'}" >
+      <div class="questions-preview-wrapper" :style="{backgroundColor: questionList.length > 0 ? 'var(--app-bg-card)' : 'transparent'}" >
         <div class="questions-preview-box">
           <div class="diabled-edit-mask"></div>
           <MaterialGroup
@@ -540,7 +540,7 @@ const onInput = () => {
         .example-button {
           padding: 12px 24px;
           border-radius: 6px;
-          background: #FEF6E6;
+          background: var(--app-brand-tint);
           color: #4A4C5B;
           font-size: 14px;
           font-weight: normal;
@@ -574,7 +574,7 @@ const onInput = () => {
     .formula-wrapper {
       width: 616px;
       height: 244px;
-      background: #ffffff;
+      background: var(--app-bg-card);
       border-radius: 8px;
       position: absolute;
       box-shadow: 0px 6px 20px 3px rgba(82, 82, 102, 0.2);
@@ -599,7 +599,7 @@ const onInput = () => {
         .title {
           font-family: PingFangSC-Medium;
           font-size: 18px;
-          color: #292a36;
+          color: var(--app-text-strong);
           text-align: center;
           line-height: 28px;
           font-weight: 500;
@@ -610,7 +610,7 @@ const onInput = () => {
         margin-top: 16px;
         text-align: left;
         font-size: 14px;
-        color: #4a4c5b;
+        color: var(--app-text-primary);
         .bold {
           font-weight: 600;
         }
@@ -649,7 +649,7 @@ const onInput = () => {
     padding: 0 24px 24px 24px;
     .input-section {
       display: flex;
-      background: #f2f4f7;
+      background: var(--app-bg-hover);
       border-radius: 4px;
       height: 120px;
 
@@ -681,7 +681,7 @@ const onInput = () => {
     width: 375px;
     height: 560px;
     max-height: 80%;
-    background-color: #fff;
+    background-color: var(--app-bg-card);
     overflow-x: hidden;
     overflow-y: auto;
     margin-top: 10%;

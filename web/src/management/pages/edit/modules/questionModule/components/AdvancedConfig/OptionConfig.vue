@@ -270,8 +270,8 @@ export default {
           text-align: left;
         }
         .star-imgupload-icon {
-          color: #92949d;
-          background-color: #fff !important;
+          color: var(--app-text-muted);
+          background-color: var(--app-bg-card) !important;
         }
       }
       .icon-mobile {
@@ -286,7 +286,7 @@ export default {
         .more-info-content {
           display: inline-block;
           margin-left: 10px;
-          border-bottom: 1px solid #e3e4e8;
+          border-bottom: 1px solid var(--app-border-color);
           border-radius: 2px;
           .el-input {
             width: 150px;
@@ -295,7 +295,7 @@ export default {
             }
           }
           .el-checkbox {
-            color: #6e707c;
+            color: var(--app-text-regular);
           }
         }
       }
@@ -309,9 +309,9 @@ export default {
     .flex-1 {
       flex: 1;
       .render-html {
-        border-color: #e3e4e8;
+        border-color: var(--app-border-color);
         border-radius: 2px;
-        color: #6e707c;
+        color: var(--app-text-regular);
         height: auto;
         padding: 9px 0;
         transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);

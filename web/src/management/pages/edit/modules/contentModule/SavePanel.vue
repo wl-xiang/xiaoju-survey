@@ -195,7 +195,7 @@ watch(schemaUpdateTime, () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--app-bg-card);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
   border-radius: 2px;
   opacity: 1;

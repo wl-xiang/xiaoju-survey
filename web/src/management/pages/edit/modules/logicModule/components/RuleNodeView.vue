@@ -123,7 +123,7 @@ defineExpose({
 .rule-wrapper {
   width: 800px;
   padding: 10px 24px;
-  border: 1px solid #e3e4e8;
+  border: 1px solid var(--app-border-color);
   border-radius: 2px;
   display: flex;
   margin: 12px 0;
@@ -136,7 +136,7 @@ defineExpose({
   .desc {
     display: inline-block;
     margin-right: 12px;
-    color: #333;
+    color: var(--app-text-strong);
     line-height: 32px;
   }
   .el-form-item {

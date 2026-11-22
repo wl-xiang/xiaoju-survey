@@ -395,7 +395,7 @@ const handleshowCreateFormExcelImport = () => {
 }
 
 .download-button {
-  background: #FFFFFF;
+  background: var(--app-bg-card);
   border: 1px solid var(--primary-color);
   border-radius: 2px;
   color:var(--primary-color)
@@ -598,7 +598,7 @@ const handleshowCreateFormExcelImport = () => {
 .dialog-footer {
   text-align: right;
   padding: 24px 20px;
-  border-top: 1px solid #e3e4e8;
+  border-top: 1px solid var(--app-border-color);
 }
 
 .error-dialog-footer {

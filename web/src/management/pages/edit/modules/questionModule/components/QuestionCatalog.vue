@@ -81,7 +81,7 @@ watch(
 
   .catelog-first-page {
     font-size: 12px;
-    color: #999999;
+    color: var(--app-text-muted);
     padding-bottom: 8px;
   }
 
@@ -99,13 +99,13 @@ watch(
 
   :deep(.el-collapse-item__header) {
     font-size: 14px;
-    color: #6e707c;
+    color: var(--app-text-regular);
     font-weight: 500;
   }
 
   .catalog-item-dragging {
     opacity: 1;
-    background: #ffffff;
+    background: var(--app-bg-card);
   }
 }
 </style>

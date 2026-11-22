@@ -55,7 +55,7 @@ const handleFormChange = ({ key, value }: any) => {
   width: 360px;
   height: 100%;
   overflow-y: auto;
-  background-color: #ffffff;
+  background-color: var(--app-bg-card);
 }
 
 .setter-title {

@@ -238,7 +238,7 @@ watch(
   font-size: 0;
   user-select: none;
   .moreControls {
-    color: #6e707c;
+    color: var(--app-text-regular);
     display: none;
 
     position: absolute;

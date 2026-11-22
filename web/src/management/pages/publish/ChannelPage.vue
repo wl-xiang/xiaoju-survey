@@ -121,19 +121,19 @@ onMounted(async () => {
     overflow: hidden;
     
 
-    background: #f6f7f9;
+    background: var(--app-bg-page);
     // padding: 30px 40px 50px 40px;
     padding-left: 80px;
     .topNav{
       width: 100%;
       height: 55px;
-      background: #fff;
+      background: var(--app-bg-card);
     }
     .content {
       display: flex;
       height: calc(100% - 90px);
       margin: 20px;
-      background-color: #fff;
+      background-color: var(--app-bg-card);
       overflow: auto;
     }
   }
@@ -154,7 +154,7 @@ onMounted(async () => {
     font-family: PingFangSC-Medium;
     margin: 20px 0;
     font-size: 18px;
-    color: #4a4c5b;
+    color: var(--app-text-primary);
     letter-spacing: 0;
     line-height: 26px;
   }

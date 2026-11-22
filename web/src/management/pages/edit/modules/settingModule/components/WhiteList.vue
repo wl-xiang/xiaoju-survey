@@ -134,7 +134,7 @@ const delAllList = () => {
   }
   :deep(th) {
     padding: 4px 0;
-    background: #f6f7f9;
+    background: var(--app-bg-page);
   }
   :deep(td) {
     padding: 6px 0;

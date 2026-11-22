@@ -69,7 +69,7 @@ watch(
     }
     :deep(.el-radio-button__original-radio:checked + .el-radio-button__inner) {
       color: $primary-color;
-      background-color: #fff !important;
+      background-color: var(--app-bg-card) !important;
     }
   }
 }
