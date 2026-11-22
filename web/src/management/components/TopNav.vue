@@ -13,6 +13,7 @@
     </div>
     <div class="login-info">
       您好，{{ userInfo?.username }}
+      <ThemeToggle class="theme-toggle" />
       <img class="login-info-img" src="/imgs/avatar.webp" />
       <span class="logout" @click="handleLogout">退出</span>
     </div>
@@ -23,6 +24,7 @@
 import { useUserStore } from '@/management/stores/user'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import ThemeToggle from './ThemeToggle.vue'
 const router = useRouter()
 
 const userStore = useUserStore()
@@ -38,8 +40,8 @@ const handleLogout = () => {
 
 <style lang="scss" scoped>
 .top-nav {
-  background: #fff;
-  color: #4a4c5b;
+  background: var(--app-bg-header, #fff);
+  color: var(--app-text-primary, #4a4c5b);
   padding: 0 20px;
   height: 56px;
   display: flex;
@@ -59,6 +61,7 @@ const handleLogout = () => {
       width: 100%;
       height: 56px;
       border: none !important;
+      background: transparent;
       :deep(.el-menu-item, .is-active) {
         border: none !important;
       }
@@ -70,6 +73,9 @@ const handleLogout = () => {
   .login-info {
     display: flex;
     align-items: center;
+    .theme-toggle {
+      margin-left: 14px;
+    }
     .login-info-img {
       margin-left: 10px;
       height: 30px;

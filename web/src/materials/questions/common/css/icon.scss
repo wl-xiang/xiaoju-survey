@@ -2,9 +2,9 @@
   font-family: 'qicon';
   /* Project id 4263885 */
   src:
-    url('//at.alicdn.com/t/c/font_4263885_u91txz1d68.woff2?t=1697079806138') format('woff2'),
-    url('//at.alicdn.com/t/c/font_4263885_u91txz1d68.woff?t=1697079806138') format('woff'),
-    url('//at.alicdn.com/t/c/font_4263885_u91txz1d68.ttf?t=1697079806138') format('truetype');
+    url('./fonts/qicon.woff2') format('woff2'),
+    url('./fonts/qicon.woff') format('woff'),
+    url('./fonts/qicon.ttf') format('truetype');
 }
 
 .qicon {

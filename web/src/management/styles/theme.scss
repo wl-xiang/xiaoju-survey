@@ -1,0 +1,129 @@
+// 全局圆角与深色模式主题
+// 默认浅色模式；html.dark 时启用深色变量
+
+:root {
+  // 圆角参数统一优化
+  --el-border-radius-base: 8px;
+  --el-border-radius-small: 6px;
+  --el-border-radius-round: 20px;
+  --app-radius-card: 12px;
+  --app-radius-input: 8px;
+
+  // 应用级语义变量（浅色）
+  --app-bg-page: #f6f7f9;
+  --app-bg-card: #ffffff;
+  --app-bg-header: #ffffff;
+  --app-text-primary: #4a4c5b;
+  --app-text-regular: #6e707c;
+  --app-border-color: #e3e4e8;
+  --app-shadow-card: 0 4px 16px 0 rgba(82, 82, 102, 0.08);
+}
+
+html.dark {
+  // Element Plus 深色补充
+  --el-bg-color: #1d1e26;
+  --el-bg-color-overlay: #25262f;
+  --el-bg-color-page: #14151b;
+  --el-text-color-primary: #e5e6eb;
+  --el-text-color-regular: #cfd0d6;
+  --el-border-color: #3a3b45;
+  --el-border-color-light: #31323c;
+  --el-border-color-lighter: #2c2d36;
+  --el-fill-color-light: #2a2b35;
+  --el-fill-color-lighter: #26272f;
+  --el-fill-color-blank: #1d1e26;
+
+  // 应用级语义变量（深色）
+  --app-bg-page: #14151b;
+  --app-bg-card: #1d1e26;
+  --app-bg-header: #1d1e26;
+  --app-text-primary: #e5e6eb;
+  --app-text-regular: #cfd0d6;
+  --app-border-color: #3a3b45;
+  --app-shadow-card: 0 4px 16px 0 rgba(0, 0, 0, 0.4);
+
+  color-scheme: dark;
+}
+
+// 通用组件圆角增强
+.el-button:not(.is-circle):not(.is-round) {
+  border-radius: var(--el-border-radius-base);
+}
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select__wrapper {
+  border-radius: var(--app-radius-input);
+}
+.el-card,
+.el-dialog,
+.el-message-box {
+  border-radius: var(--app-radius-card);
+}
+.el-popper.is-light,
+.el-popper.is-dark {
+  border-radius: 8px;
+}
+.el-menu--horizontal .el-menu-item {
+  border-radius: 6px;
+}
+
+// 深色模式下主要界面覆盖
+html.dark {
+  background-color: var(--app-bg-page);
+
+  body {
+    background-color: var(--app-bg-page);
+    color: var(--app-text-primary);
+  }
+
+  // 顶栏
+  .top-nav {
+    background: var(--app-bg-header);
+    color: var(--app-text-primary);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  // 登录页
+  .login-page {
+    background-color: var(--app-bg-page) !important;
+    background-image: none !important;
+
+    .login-top {
+      background: var(--app-bg-header);
+      color: var(--app-text-primary);
+    }
+
+    .login-form {
+      background: var(--app-bg-card);
+      box-shadow: var(--app-shadow-card);
+    }
+  }
+
+  // 问卷列表等页面容器
+  .survey-page,
+  .list-container,
+  .main-container {
+    background: var(--app-bg-page);
+    color: var(--app-text-primary);
+  }
+
+  // 常见白色卡片/面板
+  .el-dialog,
+  .el-message-box,
+  .el-card {
+    background-color: var(--app-bg-card);
+  }
+
+  .el-table {
+    --el-table-bg-color: var(--app-bg-card);
+    --el-table-tr-bg-color: var(--app-bg-card);
+    --el-table-header-bg-color: #25262f;
+    --el-table-row-hover-bg-color: #2a2b35;
+    --el-table-border-color: var(--app-border-color);
+  }
+
+  // iconfont 图标颜色跟随文字
+  .iconfont {
+    color: inherit;
+  }
+}

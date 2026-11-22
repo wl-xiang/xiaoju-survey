@@ -29,6 +29,7 @@ services:
       AImodel_API_URL: ${AImodel_API_URL}
       AImodel_API_KEY: ${AImodel_API_KEY}
       AImodel_MODEL: ${AImodel_MODEL}
+      XIAOJU_SURVEY_ACCESS_CODE: ${XIAOJU_SURVEY_ACCESS_CODE:-xiaoju@access} # 登录/注册准入码，未设置时默认为 xiaoju@access
     links:
       - mongo:mongo
     depends_on:

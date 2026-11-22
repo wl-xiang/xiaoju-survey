@@ -42,6 +42,7 @@ describe('AuthController', () => {
         password: 'testPassword',
         captchaId: 'testCaptchaId',
         captcha: 'testCaptcha',
+        accessCode: 'xiaoju@access',
       };
 
       jest
@@ -83,6 +84,27 @@ describe('AuthController', () => {
       );
     });
 
+    it('should throw HttpException with ACCESS_CODE_INCORRECT code when access code is incorrect', async () => {
+      const mockUserInfo = {
+        username: 'testUser',
+        password: 'testPassword',
+        captchaId: 'testCaptchaId',
+        captcha: 'testCaptcha',
+        accessCode: 'wrongAccessCode',
+      };
+
+      jest
+        .spyOn(captchaService, 'checkCaptchaIsCorrect')
+        .mockResolvedValue(true);
+
+      await expect(controller.register(mockUserInfo)).rejects.toThrow(
+        new HttpException(
+          '准入码不正确',
+          EXCEPTION_CODE.ACCESS_CODE_INCORRECT,
+        ),
+      );
+    });
+
     it('should throw HttpException with PASSWORD_INVALID code when password is invalid', async () => {
       const mockUserInfo = {
         username: 'testUser',
@@ -107,6 +129,7 @@ describe('AuthController', () => {
         password: 'testPassword',
         captchaId: 'testCaptchaId',
         captcha: 'testCaptcha',
+        accessCode: 'xiaoju@access',
       };
 
       jest
@@ -157,12 +180,34 @@ describe('AuthController', () => {
       );
     });
 
+    it('should throw HttpException with ACCESS_CODE_INCORRECT code when access code is incorrect', async () => {
+      const mockUserInfo = {
+        username: 'testUser',
+        password: 'testPassword',
+        captchaId: 'testCaptchaId',
+        captcha: 'testCaptcha',
+        accessCode: 'wrongAccessCode',
+      };
+
+      jest
+        .spyOn(captchaService, 'checkCaptchaIsCorrect')
+        .mockResolvedValue(true);
+
+      await expect(controller.login(mockUserInfo)).rejects.toThrow(
+        new HttpException(
+          '准入码不正确',
+          EXCEPTION_CODE.ACCESS_CODE_INCORRECT,
+        ),
+      );
+    });
+
     it('should throw HttpException with USER_NOT_EXISTS code when user is not found', async () => {
       const mockUserInfo = {
         username: 'testUser',
         password: 'testPassword',
         captchaId: 'testCaptchaId',
         captcha: 'testCaptcha',
+        accessCode: 'xiaoju@access',
       };
 
       jest
@@ -184,6 +229,7 @@ describe('AuthController', () => {
         password: 'testPassword',
         captchaId: 'testCaptchaId',
         captcha: 'testCaptcha',
+        accessCode: 'xiaoju@access',
       };
 
       jest
