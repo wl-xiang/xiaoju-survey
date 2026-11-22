@@ -351,15 +351,23 @@ const refreshCaptcha = async () => {
   .captcha-wrapper {
     display: flex;
     align-items: center;
+    width: 100%;
+    gap: 16px;
+    .el-input {
+      flex: 1;
+      min-width: 0;
+    }
     .captcha-img {
+      flex: 0 0 120px;
+      width: 120px;
       height: 40px;
       cursor: pointer;
       border-radius: var(--el-border-radius-base, 8px);
       overflow: hidden;
       :deep(> svg) {
-        max-height: 40px;
-        width: 120px;
-        margin-left: 20px;
+        display: block;
+        width: 100%;
+        height: 100%;
       }
     }
   }
